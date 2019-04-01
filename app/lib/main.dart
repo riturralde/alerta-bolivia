@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.menu),
+          // leading: Icon(Icons.menu),
           title: Text(
             'ALERTAS',
             textAlign: TextAlign.center,
@@ -80,9 +80,40 @@ class MyApp extends StatelessWidget {
             WideCard(incendios),
             WideCard(desaparecidos),
             WideCard(nuclear),
-
-
           ],
+        ),
+        drawer: new Drawer(
+          child: ListView(
+            children: <Widget>[
+              new UserAccountsDrawerHeader(
+                accountName: Text('Rodrigo Iturralde'),
+                accountEmail: Text('riturralde@byui.edu'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage('assets/avatar.jpeg'),
+                ),
+              ),
+              new ListTile(
+                leading: Icon(Icons.search),
+                title: Text('Descubrir', style: TextStyle(fontSize: 22.0),),
+              ),
+              new ListTile(
+                leading: Icon(Icons.star),
+                title: Text('Mis suscripciones', style: TextStyle(fontSize: 22.0),),
+              ),
+              new ListTile(
+                leading: Icon(Icons.help_outline),
+                title: Text('Acerca de', style: TextStyle(fontSize: 22.0),),
+              ),
+              new ListTile(
+                leading: Icon(Icons.receipt),
+                title: Text('Terminos y Condiciones', style: TextStyle(fontSize: 22.0),),
+              ),
+              new ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Opciones', style: TextStyle(fontSize: 22.0),),
+              )
+            ],
+          ),
         ),
       ),
     );
