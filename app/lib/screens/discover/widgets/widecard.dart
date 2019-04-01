@@ -25,7 +25,7 @@ class WideCard extends StatelessWidget
                 child: Text(service.provider,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18.0,
+                      fontSize: 15.0,
                       fontStyle: FontStyle.italic
                   ),
                   overflow: TextOverflow.fade,
@@ -62,8 +62,9 @@ class WideCard extends StatelessWidget
       child: grid,
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(service.imagePath),
-            fit: BoxFit.fill
+          image: AssetImage(service.imagePath),
+          fit: BoxFit.fitWidth,
+
         )
       ),
     );
